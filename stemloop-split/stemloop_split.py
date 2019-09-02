@@ -24,12 +24,18 @@ for file in os.listdir(path):
             singles.append("")
 
         for i in range(0, len(lines[0]), 3):
-            for j in range(len(lines)):
-                singles[j] = singles[j] + lines[j][i] + lines[j][i+1]
-                doubles[j] = doubles[j] + lines[j][i+2]
+            if i+2 < len(lines[0]):
+                for j in range(len(lines)):
+                    doubles[j] = doubles[j] + lines[j][i] + lines[j][i+1]
+                    singles[j] = singles[j] + lines[j][i+2]
 
-        fdoubles = open(file.replace(".txt","_loop.txt"), "w")
-        fsingles = open(file.replace(".txt","_stem.txt"), "w")
+        
+        for m in range(len(doubles)):
+            doubles[m] = doubles[m] + '\n'
+            singles[m] = singles[m] + '\n'
+
+        fdoubles = open(file.replace(".fas","_doubles.fas"), "w")
+        fsingles = open(file.replace(".fas","_singles.fas"), "w")
 
         for k in range(len(headers)):
             fdoubles.write(headers[k])
