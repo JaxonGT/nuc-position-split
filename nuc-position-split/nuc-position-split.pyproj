@@ -4,13 +4,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>62407cc2-d308-4500-86b6-cf40e256a7bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>stemloop_split.py</StartupFile>
+    <StartupFile>nuc_position_split.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>stemloop-split</Name>
-    <RootNamespace>stemloop-split</RootNamespace>
+    <Name>nuc-position-split</Name>
+    <RootNamespace>nuc-position-split</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="stemloop_split.py" />
+    <Compile Include="nuc_position_split.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
